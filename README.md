@@ -1,7 +1,5 @@
 # Tektronix TEK371 high power curve tracer driver
 
-A work-in-progress TEK371 controller based on the GPIB commands on the manual and PyVisa.
-
 > This project is currently a **work in progress**.
 
 ---
