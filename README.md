@@ -2,7 +2,7 @@
 
 > **Note:** This project is heavily based on code originally written by **[David](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py)**.
 
-This repository has all the commands and functions necessary to control the Tektronix TEK371 high power curve tracer using PyVISA. Its intended use is to perform I-V curves of power semiconductor devices, even though the equipment is capable of much more. The functions to control other aspects rather than the I-V curves are implemented, but not tested.
+This repository has all the commands and functions necessary to control the Tektronix TEK371 high power curve tracer using [PyVISA](https://pyvisa.readthedocs.io/). Its intended use is to perform I-V curves of power semiconductor devices, even though the equipment is capable of much more. The functions to control other aspects rather than the I-V curves are implemented, but not tested.
 
 ---
 
