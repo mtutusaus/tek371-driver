@@ -2,7 +2,7 @@
 
 A work-in-progress TEK371 controller based on the GPIB commands on the manual and PyVisa.
 
-> This project is currently a **work in process**.
+> This project is currently a **work in progress**.
 
 ---
 
