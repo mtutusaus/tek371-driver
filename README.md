@@ -6,6 +6,23 @@ This repository has all the commands and functions necessary to control the Tekt
 
 ---
 
+## Features
+- Control Tektronix TEK371 via GPIB using PyVISA.
+- Perform automated I-V curve measurements for power semiconductors.
+  
+---
+
+## Requirements
+- Python 3.10 (not tested with other versions)
+- [PyVISA](https://pyvisa.readthedocs.io/)
+- GPIB interface (e.g., NI GPIB-USB adapter)
+
+---
+
+## Usage
+See [test](tests/test_instrument.py) for a script to perform any number of consecutive I-V measurements of a power diode.
+
+---
 ## **License**
 This project is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
