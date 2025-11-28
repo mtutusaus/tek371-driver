@@ -1,4 +1,4 @@
-# Tektronix TEK371 high power curve tracer driver
+# Tektronix TEK371 high power curve tracer controller
 
 > This project is currently a **work in progress**.
 
