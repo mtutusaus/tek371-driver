@@ -1,6 +1,6 @@
 # Tektronix TEK371 high power curve tracer controller
 
-> **Note:** This project is heavily based on code originally written by my colleague **[David]([https://github.com/sansanda/pymeasure/tree/dev/tek371A](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py))**.
+> **Note:** This project is heavily based on code originally written by my colleague **[David](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py)**.
 
 
 ---
@@ -21,7 +21,7 @@ See the [LICENSE](LICENSE) file for the full license text.
 
 ## Acknowledgments
 
-- I would like to acknowledge **[David]([https://github.com/sansanda/pymeasure/tree/dev/tek371A](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py))** for the original implementation that served as the foundation for this project. Much of the core logic is derived from their work, and this repository builds upon and extends their contributions.
+- I would like to acknowledge **[David](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py)** for the original implementation that served as the foundation for this project. Much of the core logic is derived from their work, and this repository builds upon and extends their contributions.
 - M365 Copilot (Microsoft) for development assistance
 
 ## Author
