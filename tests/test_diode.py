@@ -29,7 +29,11 @@ def main():
 
     # Configure graticule
     tek.set_horizontal("COL", HORIZONTAL_SCALE)  # 200 mV/div
-    tek.set_vertical(VERTICAL_SCALE)                # 5 A/div
+    tek.set_vertical(VERTICAL_SCALE)  # 5 A/div
+
+    # CRT settings
+    print(f"Horizontal scale set to: {tek.get_horizontal().split(':')[1]} V/DIV")
+    print(f"Vertical scale set to: {tek.get_vertical().split(':')[1]} A/DIV")
 
     # Set STORE mode before sweep
     tek.set_display_mode("STO")
@@ -37,6 +41,7 @@ def main():
     for i in range(1, 2):
         # Set Collector Supply to desired %
         tek.set_collector_supply(VCE_PERCENTAGE)
+        print(f"Collector supply set to: {tek.get_collector_supply().split()[-1]} %")
 
         # Set measurement mode to sweep
         tek.set_measurement_mode("SWE")
