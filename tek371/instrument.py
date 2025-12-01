@@ -568,6 +568,7 @@ class Tek371:
         Args:
             filename (str): Path to the output CSV file.
         """
+
         # Read preamble and split into array
         preamble_array = self.read_preamble().split(",")
 
@@ -580,23 +581,20 @@ class Tek371:
 
         # Calculate expected bytes (just used to check all the waveform was received correctly)
 
-        # ---- From the TEK371 manual (also explained in get_curve_data()) ----
+        # ---- From the TEK371 manual ----
         curve_head_len = 25
         bytes_for_data_len = 2
         bytes_for_checksum = 1
         bytes_per_x = 2
         bytes_per_y = 2
-        # ---- From the TEK371 manual (also explained in get_curve_data()) ----
+        # ---- From the TEK371 manual ----
 
         points_to_read = nr_pt * (bytes_per_x + bytes_per_y)
         expected_bytes = curve_head_len + bytes_for_data_len + points_to_read + bytes_for_checksum
 
         # Request curve and read exact number of bytes
 
-        # TODO: Check if this works...
-        # self.write(cmd.CUR_QUERY)
-        self.get_curve_data() # Theoretically this function does the same as self.write(cmd.CUR_QUERY)
-        # It was created to add more context about what the equipment sends (see get_curve_data())
+        self.write(cmd.CUR_QUERY)
 
         raw_curve = self.inst.read_bytes(expected_bytes)
 
@@ -631,24 +629,6 @@ class Tek371:
             writer.writerows(points)
 
         print(f"Curve saved to {filename}")
-
-    def get_curve_data(self) -> None:
-        """
-        Queries the 371 for curve data. It responds with the curve data for the view curve when in view mode, and with the curve data for the current display when in store mode.
-
-        Returns:
-            str: Response in the format:
-                CURVE CURVEID <curveid>,%<binary data>
-
-            Where:
-                - curveid: "INDEX <index>" for a Store mode curve,
-                  index ranges from 1 to 16 for bubble memory storage locations.
-                - binary data: <count><first point>...<last point><checksum>
-                    * count: Two bytes indicating the number of data points plus one
-                    * point: Two bytes for X coordinate and two bytes for Y coordinate (00 through FF)
-                    * checksum: One byte, the two's complement of the modulo-256 sum of the preceding binary data
-        """
-        self.inst.write(cmd.CUR_QUERY)
 
     def read_preamble(self) -> str:
         return self.query(cmd.WFM_QUERY)

@@ -19,11 +19,10 @@ def main():
     # Set peak power to 300W
     tek.set_peak_power(300)
 
-    # Configure step generator (do not modify)
+    # Configure step generator (disabled)
     tek.set_step_number(0)
-    tek.enable_step_offset("OFF")
-    tek.set_step_voltage(200e-3) # necessary?
-    tek.set_step_offset(0) # necessary?
+    tek.set_step_voltage(200e-3)
+    tek.set_step_offset(0)
 
     # Enable SRQ handling
     tek.enable_srq_event()
