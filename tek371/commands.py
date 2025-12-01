@@ -171,7 +171,7 @@ ID_QUERY = "ID?"
 INI_SET = "INI"
 # Purpose:  Initializes the 371 to its power-up settings
 # Syntax:   INI
-# Initializes the instrument as DIS STORE, CUR OFF, DIS CAL:OFF, DIS INV_OFF, STP CUR:1.0E-3, STP OFF:0.00, STP INV:0FF, PKP 300, CSP NPN, HOR COL:1.0E+0, OPC OFF, MEA REPEAT, STP NUM:2, STP MUL:OFF, VCS 0.0, VER COL:1.0E+0, RQS ON, DEB OFF
+# Initializes the instrument as DIS STORE, CUR OFF, DIS CAL:OFF, DIS INV:OFF, STP CUR:1.0E-3, STP OFF:0.00, STP INV:0FF, PKP 300, CSP NPN, HOR COL:1.0E+0, OPC OFF, MEA REPEAT, STP NUM:2, STP MUL:OFF, VCS 0.0, VER COL:1.0E+0, RQS ON, DEB OFF
 
 SET_QUERY = "SET?"
 # Purpose:  Queries the 371 for its current front-panel settings
@@ -273,6 +273,7 @@ STP_VOL_SET = "STP VOL:{val}"        # voltage step size
 STP_NUM_SET = "STP NUM:{val}"        # number of steps
 STP_INV_SET = "STP INV:{mode}"       # ON | OFF, set polarity
 STP_MUL_SET = "STP MUL:{mode}"       # ON | OFF, set step multi 0.1X mode
+STP_OFF_MODE_SET = "STP OFF:{mode}"  # ON | OFF, enable or disable step generator offset
 STP_OFF_SET = "STP OFF:{val}"        # offset value
 
 
