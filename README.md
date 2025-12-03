@@ -4,6 +4,8 @@
 
 This repository has all the commands and functions necessary to control the Tektronix TEK371 high power curve tracer using [PyVISA](https://pyvisa.readthedocs.io/). Its intended use is to perform I-V curves of power semiconductor devices, even though the equipment is capable of much more. The functions to control other aspects rather than the I-V curves are implemented, but not tested.
 
+> **Note:** As for version 0.1.0, the controller only works if it is the only equipment controlling the SRQ line of the GPIB bus. If other equipments connected to the same bus hold the SRQ line the controller will not detect the end of a sweep measurement.
+
 ---
 
 ## Features
@@ -20,7 +22,7 @@ This repository has all the commands and functions necessary to control the Tekt
 ---
 
 ## Usage
-See [test](tests/test_instrument.py) for a script to perform any number of consecutive I-V measurements of a power diode.
+See [test](tests/test_diode.py) for a script to perform any number of consecutive I-V measurements of a power diode.
 
 ---
 ## **License**
