@@ -1,5 +1,6 @@
 # Tektronix TEK371 high power curve tracer controller
 
+![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![PyVISA](https://img.shields.io/badge/instrument-PyVISA-blue.svg)
 ![AI-Assisted](https://img.shields.io/badge/Development-AI--Assisted-purple)
