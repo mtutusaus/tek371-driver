@@ -6,11 +6,14 @@
 ![AI-Assisted](https://img.shields.io/badge/Development-AI--Assisted-purple)
 [![License: CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-> **Note:** This project is heavily based on code originally written by **[David](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py)**.
+> This project is heavily based on code originally written by **[David](https://github.com/sansanda/pymeasure/blob/dev/tek371A/pymeasure/instruments/tektronix/tek371A.py)**.
 
 This repository has all the commands and functions necessary to control the Tektronix TEK371 high power curve tracer using [PyVISA](https://pyvisa.readthedocs.io/). Its intended use is to perform I-V curves of power semiconductor devices, even though the equipment is capable of much more. The functions to control other aspects rather than the I-V curves are implemented, but not tested.
 
-> **Note:** As for version 0.1.0, the controller only works if it is the only equipment controlling the SRQ line of the GPIB bus. If other equipments connected to the same bus hold the SRQ line the controller will not detect the end of a sweep measurement.
+---
+## **Current issues**
+
+As for version 0.1.0, the controller only works if it is the only equipment controlling the SRQ line of the GPIB bus. If other equipments connected to the same bus hold the SRQ line the controller will not detect the end of a sweep measurement.
 
 ---
 ## **Features**
