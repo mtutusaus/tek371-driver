@@ -29,7 +29,7 @@ See [test](tests/test_diode.py) for a script to perform any number of consecutiv
 ---
 ## **Development**
 
-- This project was developed with AI assistance (M365 Copilot) for code suggestions, debugging, and optimization.
+- This project is developed with AI assistance (M365 Copilot) for code suggestions, debugging, and optimization.
 
 ---
 ## **License**
